@@ -19,18 +19,23 @@
 
 // TODO: Implémenter les fonctions
 
-export function add(a: any, b: any): any {
-  throw new Error("Not implemented");
+export function add(a: number, b: number): number {
+  return a + b;
 }
+console.log(add(2, 3));
 
-export function isAdult(age: any): any {
-  throw new Error("Not implemented");
+export function isAdult(age: number): boolean {
+  return age >= 18;
 }
+console.log(isAdult(20));
 
-export function getFullName(firstName: any, lastName: any): any {
-  throw new Error("Not implemented");
+export function getFullName(firstName: string, lastName: string): any {
+  return `${firstName} ${lastName}`;
 }
+console.log(getFullName("John", "Doe"));
 
-export function greet(name: any): any {
-  throw new Error("Not implemented");
+export function greet(name?: string): string {
+  return name ? `Hello, ${name}` : "Hello!";
 }
+console.log(greet("Alice"));
+console.log(greet());
