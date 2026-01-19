@@ -9,4 +9,6 @@
  *  - ne pas utiliser la fonction concat de String
  */
 
-const concat = null;
+const concat = (un, deux) => `${un} ${deux}`;
+
+console.log(concat("John", "Doe"));
