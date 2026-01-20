@@ -29,13 +29,13 @@ export function isAdult(age: number): boolean {
 }
 console.log(isAdult(20));
 
-export function getFullName(firstName: string, lastName: string): any {
+export function getFullName(firstName: string, lastName: string): string {
   return `${firstName} ${lastName}`;
 }
 console.log(getFullName("John", "Doe"));
 
 export function greet(name?: string): string {
-  return name ? `Hello, ${name}` : "Hello!";
+  return name ? `Hello, ${name}!` : "Hello!";
 }
 console.log(greet("Alice"));
 console.log(greet());

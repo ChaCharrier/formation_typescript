@@ -11,7 +11,7 @@
 
 // TODO: Créer et exporter la fonction greet
 export function greet(name: string): string {
-  return `Hello, ${name}`;
+  return `Hello, ${name}!`;
 }
 
 /**
@@ -19,3 +19,4 @@ export function greet(name: string): string {
  * Exécuter: npx tsx ./01_helloTyped.ts
  */
 console.log(greet("Alice")); // Devrait afficher: Hello, Alice!
+console.log(greet(""));
