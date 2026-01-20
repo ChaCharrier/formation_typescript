@@ -26,12 +26,25 @@
 
 // TODO: Définir le type User et implémenter les fonctions
 
-export type User = { username: any };
+export type User = { username: string };
 
-export function formatId(id: any): any {
-  throw new Error("Not implemented");
+export function formatId(id: number | string): string {
+  if (typeof id === "number") {
+    return `ID-${id}`;
+  } else {
+    return id;
+  }
 }
 
-export function getUsername(user: any): any {
-  throw new Error("Not implemented");
+console.log(formatId(123));
+console.log(formatId("ABC"));
+
+export function getUsername(user: User | null): string {
+  if (!!user) {
+    return user.username.toUpperCase();
+  }
+  return "INVITÉ";
 }
+
+console.log(getUsername({ username: "alice" }));
+console.log(getUsername(null));
