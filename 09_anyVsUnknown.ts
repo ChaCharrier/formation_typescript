@@ -31,9 +31,24 @@
 // TODO: Implémenter les fonctions
 
 export function processUnknown(value: unknown): number {
-  throw new Error("Not implemented");
+  if (typeof value === "string") {
+    return value.length;
+  }
+  return 0;
 }
 
+console.log(processUnknown("hello"));
+console.log(processUnknown(123));
+console.log(processUnknown(null));
+
 export function safeParseNumber(value: unknown): number | null {
-  throw new Error("Not implemented");
+  if (typeof value === "string" || typeof value === "number") {
+    return Number.isNaN(Number(value)) ? null : Number(value);
+  }
+  return null;
 }
+
+console.log(safeParseNumber("42"));
+console.log(safeParseNumber(3.14));
+console.log(safeParseNumber("abc"));
+console.log(safeParseNumber(null));
