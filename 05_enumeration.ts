@@ -20,9 +20,9 @@
 // TODO: Définir l'enum Color et implémenter getColorCode
 
 export enum Color {
-  Red,
-  Green,
-  Blue,
+  Red = "Red",
+  Green = "Green",
+  Blue = "Blue",
 }
 
 export function getColorCode(color: Color): string {

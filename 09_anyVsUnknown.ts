@@ -42,6 +42,7 @@ console.log(processUnknown(123));
 console.log(processUnknown(null));
 
 export function safeParseNumber(value: unknown): number | null {
+  if (value === "") return null;
   if (typeof value === "string" || typeof value === "number") {
     return Number.isNaN(Number(value)) ? null : Number(value);
   }
@@ -52,3 +53,4 @@ console.log(safeParseNumber("42"));
 console.log(safeParseNumber(3.14));
 console.log(safeParseNumber("abc"));
 console.log(safeParseNumber(null));
+console.log(safeParseNumber(""));
